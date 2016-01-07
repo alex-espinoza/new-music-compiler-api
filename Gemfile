@@ -13,6 +13,8 @@ gem 'pg'
 gem 'awesome_print'
 gem 'active_model_serializers'
 gem 'feedjira'
+gem 'figaro'
+gem 'httparty'
 
 
 
