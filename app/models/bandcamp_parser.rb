@@ -8,7 +8,7 @@ class BandcampParser
 
   def initialize(source)
     @source = source
-    @source_url = source.url
+    @source_url = @source.url
     @import_io_api_key = Rails.application.secrets.import_io_api_key
   end
 
