@@ -33,7 +33,7 @@ class BandcampEntrySaver
           embed_data: "",
           url: entry["album_link"]
         )
-        new_entry.save
+        new_entry.save!
 
         puts "#{artist_and_album} - was saved!"
       end
