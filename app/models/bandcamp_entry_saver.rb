@@ -12,17 +12,27 @@ class BandcampEntrySaver
   def check_newest_entries(newest_entries)
     @newest_entries = newest_entries
     first_entry = @newest_entries.first
-    first_entry_artist_and_album = "#{first_entry['artist_name']} - #{first_entry['album_name']}"
+    formatted_first_entry_artist_and_album = format_bandcamp_entry_title(first_entry)
 
-    if first_entry_artist_and_album != @last_saved_entry.try(:title)
+    if formatted_first_entry_artist_and_album != @last_saved_entry.try(:title)
       save_newest_entries
     end
+  end
+
+  def format_bandcamp_entry_title(entry)
+    if entry['artist_name']
+      title = "#{entry['artist_name']} - #{entry['album_name']}"
+    else
+      title = entry['album_name']
+    end
+
+    title
   end
 
   def save_newest_entries
     # add in the searching of album id in the newest entry hash, cut the hash there, reverse hash, then save to keep things in reverse chronological order
     @newest_entries.each do |entry|
-      artist_and_album = "#{entry['artist_name']} - #{entry['album_name']}"
+      artist_and_album = format_bandcamp_entry_title(entry)
   
       if artist_and_album == @last_saved_entry.try(:title)
         break
@@ -31,7 +41,8 @@ class BandcampEntrySaver
           title: artist_and_album,
           description: "",
           embed_data: "",
-          url: entry["album_link"]
+          url: entry["album_link"],
+          image_url: entry["album_art_image"]
         )
         new_entry.save!
 
