@@ -30,7 +30,6 @@ class BandcampEntrySaver
   end
 
   def save_newest_entries
-    # add in the searching of album id in the newest entry hash, cut the hash there, reverse hash, then save to keep things in reverse chronological order
     @newest_entries.each do |entry|
       artist_and_album = format_bandcamp_entry_title(entry)
   
@@ -42,7 +41,8 @@ class BandcampEntrySaver
           description: "",
           embed_data: "",
           url: entry["album_link"],
-          image_url: entry["album_art_image"]
+          image_url: entry["album_art_image"],
+          published_at: Time.now
         )
         new_entry.save!
 
