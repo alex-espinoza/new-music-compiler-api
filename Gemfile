@@ -11,6 +11,7 @@ gem 'pry-rails', group: :development
 
 gem 'pg'
 gem 'awesome_print'
+gem 'responders'
 gem 'active_model_serializers'
 gem 'feedjira'
 gem 'figaro'
