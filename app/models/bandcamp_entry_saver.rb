@@ -39,7 +39,7 @@ class BandcampEntrySaver
         new_entry = @source.entries.build(
           title: artist_and_album,
           description: "",
-          embed_data: "",
+          embed_data: entry["album_id"],
           url: entry["album_link"],
           image_url: entry["album_art_image"],
           published_at: Time.now
