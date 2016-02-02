@@ -21,3 +21,8 @@ require "soundcloud"
 # import.io
 url = "http://pitchfork.com/rss/reviews/albums/"
 feed = Feedjira::Feed.fetch_and_parse(url)
+
+http://tutorials.jumpstartlab.com/topics/systems/automation.html
+http://eewang.github.io/blog/2013/03/12/how-to-schedule-tasks-using-whenever/
+https://github.com/javan/whenever/wiki/Output-redirection-aka-logging-your-cron-jobs
+http://hawkins.io/2012/07/advanced_caching_part_6-fast_json_apis/
