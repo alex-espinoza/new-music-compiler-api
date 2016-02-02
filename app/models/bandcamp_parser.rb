@@ -13,8 +13,15 @@ class BandcampParser
   end
 
   def get_newest_entries
-    response = self.class.get("/store/connector/c7a0760e-88f9-4bb6-9fd0-9729e2e44ac6/_query", query: {input: "webpage/url:#{@source_url}", _apikey: @import_io_api_key})
-    newest_entries = response["results"]
+    begin
+      response = self.class.get("/store/connector/c7a0760e-88f9-4bb6-9fd0-9729e2e44ac6/_query", query: {input: "webpage/url:#{@source_url}", _apikey: @import_io_api_key})
+      newest_entries = response["results"]
+    rescue HTTParty::Error => e
+      #write error to log
+      newest_entries = nil
+      binding.pry
+    end
+
     newest_entries
   end
 end

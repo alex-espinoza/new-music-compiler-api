@@ -7,9 +7,12 @@ namespace :sources do
       source_identifier = SourceIdentifier.new(source)
       parser = source_identifier.identify_parser
       newest_entries = parser.get_newest_entries
-      source.update_last_checked_at
-      entry_saver = source_identifier.identify_entry_saver
-      entry_saver.check_newest_entries(newest_entries)
+
+      if newest_entries
+        source.update_last_checked_at
+        entry_saver = source_identifier.identify_entry_saver
+        entry_saver.check_newest_entries(newest_entries)
+      end
     end
   end
 end
