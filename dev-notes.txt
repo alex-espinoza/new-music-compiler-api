@@ -1,0 +1,23 @@
+<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3267503732/size=large/bgcol=ffffff/linkcol=0687f5/
+tracklist=false/transparent=true/" seamless><a href="http://orangemilkrecords.bandcamp.com/album/deep-thoughts">Deep Thoughts by Giant Claw</a></iframe>
+
+
+
+
+require "feedjira"
+require "pry"
+require "soundcloud"
+
+#sc = Soundcloud.new(client_id: 'cb981b0f70a52960435947382b77df43')
+#a = sc.get('/users/5724995/tracks')
+#b = sc.get('/users/5724995/playlists')
+
+# url = "http://orangemilkrecords.bandcamp.com/feed"
+# url2 = "http://www.youtube.com/feeds/videos.xml?channel_id=UC6-ymYjG0SU0jUWnWh9ZzEQ"
+
+# feed = Feedjira::Feed.fetch_and_parse(url)
+# feed2 = Feedjira::Feed.fetch_and_parse(url2)
+
+# import.io
+url = "http://pitchfork.com/rss/reviews/albums/"
+feed = Feedjira::Feed.fetch_and_parse(url)
