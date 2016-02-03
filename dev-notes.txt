@@ -1,8 +1,4 @@
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=3267503732/size=large/bgcol=ffffff/linkcol=0687f5/
-tracklist=false/transparent=true/" seamless><a href="http://orangemilkrecords.bandcamp.com/album/deep-thoughts">Deep Thoughts by Giant Claw</a></iframe>
-
-
-
+<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3267503732/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://orangemilkrecords.bandcamp.com/album/deep-thoughts">Deep Thoughts by Giant Claw</a></iframe>
 
 require "feedjira"
 require "pry"
@@ -26,3 +22,4 @@ http://tutorials.jumpstartlab.com/topics/systems/automation.html
 http://eewang.github.io/blog/2013/03/12/how-to-schedule-tasks-using-whenever/
 https://github.com/javan/whenever/wiki/Output-redirection-aka-logging-your-cron-jobs
 http://hawkins.io/2012/07/advanced_caching_part_6-fast_json_apis/
+http://edelpero.svbtle.com/everything-you-always-wanted-to-know-about-writing-good-rake-tasks-but-were-afraid-to-ask
