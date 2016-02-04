@@ -15,7 +15,7 @@ class BandcampParser
 
   def get_newest_entries
     album_urls = get_album_urls
-    
+
     if album_urls
       newest_entries = compile_newest_entries(album_urls)
     else
@@ -52,7 +52,8 @@ class BandcampParser
       end
     end
 
-    newest_entries.compact!
+    # Explain here later why we reverse the order blah
+    newest_entries = newest_entries.compact.reverse
     newest_entries
   end
 
