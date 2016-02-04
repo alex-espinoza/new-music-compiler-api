@@ -5,4 +5,5 @@ Install Figaro:
 
 Add API keys inside <tt>config/application.yml</tt> for the following:
 
-* Import.io - http://www.import.io - <tt>import_io_api_key</tt>
+* Import.io - http://www.import.io - <tt>IMPORT_IO_API_KEY</tt>
+* Soundcloud - http://www.soundcloud.com - <tt>SOUNDCLOUD_CLIENT_ID</tt>
