@@ -16,6 +16,7 @@ gem 'active_model_serializers'
 gem 'feedjira'
 gem 'figaro'
 gem 'httparty'
+gem 'soundcloud'
 
 
 
